@@ -195,7 +195,7 @@ section {
 
 .about-info img {
   border-radius: 50%;
-  width: 50%;
+  width: 45%;
 }
 
 /* Experience Section */
@@ -226,8 +226,9 @@ section {
 }
 
 .skills-info img {
-  width: 50%;
+  width: 100%;
   object-fit: contain;
+  border-radius: 10px;
 }
 
 .skills-list {
