@@ -116,6 +116,7 @@ li a:hover {
   flex-direction: column;
   justify-content: center;
   display: none;
+  cursor: pointer;
 }
 
 .btn-menu.open {
@@ -173,19 +174,18 @@ header p {
 }
 
 /* About Section */
-section {
-  margin-top: 4rem;
+section#about {
+  margin-top: 100px;
 }
 
 .about-info {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 3rem;
 }
 
 .about-info p {
   margin-top: 1rem;
-  width: 80%;
   color: var(--black);
 }
 
@@ -195,10 +195,15 @@ section {
 
 .about-info img {
   border-radius: 50%;
-  width: 45%;
+  max-width: 100%;
+  width: 450px;
 }
 
 /* Experience Section */
+section#experience {
+  margin-top: 150px;
+}
+
 .experience-info {
   display: flex;
   align-items: center;
@@ -206,9 +211,14 @@ section {
   margin-top: 3rem;
 }
 
+.experience-info p {
+  margin: 0.5rem 0;
+}
+
 .experience-info img {
-  width: 50%;
-  height: 100%;
+  min-width: 50%;
+  height: 350px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -217,9 +227,13 @@ section {
 }
 
 /* Skills Section */
+section#skills {
+  margin-top: 150px;
+}
+
 .skills-info {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 3rem;
   width: 100%;
   justify-content: space-between;
@@ -227,15 +241,20 @@ section {
 
 .skills-info img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .skills-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   width: 100%;
   justify-content: space-between;
+}
+
+.skills-list h3 {
+  font-weight: 400;
 }
 
 /* Contact Section */
@@ -243,6 +262,7 @@ section {
   background-color: var(--black);
   padding: 3rem 0;
   color: var(--white);
+  margin-top: 130px;
 }
 
 .contact p {
@@ -334,7 +354,7 @@ footer a:hover {
   color: var(--white);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   body {
     padding-top: 4.3rem;
   }
@@ -418,7 +438,7 @@ footer a:hover {
   }
 
   .skills-list {
-    text-align: center;
+    gap: 1rem;
   }
 }
 
@@ -433,6 +453,10 @@ footer a:hover {
 
   h2 {
     font-size: 1.9rem;
+  }
+
+  #skills h2 {
+    text-align: left;
   }
 
   h3 {
@@ -456,7 +480,12 @@ footer a:hover {
     line-height: 1.7;
   }
 
+  .experience-info img {
+    height: 200px;
+  }
+
   .skills-list {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 }
