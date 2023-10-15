@@ -285,14 +285,15 @@ form {
   margin: 0 auto;
   gap: 20px;
   margin-top: 2rem;
+  font-family: 'Space Mono', monospace;
 }
 
 form input {
   border: none;
   outline: none;
-  font-family: 'Space Mono', monospace;
   padding: 1rem 2rem;
   font-size: 1.1rem;
+  font-family: inherit;
 }
 
 form input:focus {
@@ -306,18 +307,32 @@ form textarea {
   width: 100%;
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  font-family: 'Space Mono', monospace;
 }
 
 form textarea:focus {
   outline: 2px solid var(--accent);
 }
 
-form .btn-submit {
-  max-width: 180px;
+.btn-submit {
+  width: 170px;
+  height: 50px;
   font-size: 1rem;
-  cursor: pointer;
   align-self: flex-end;
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 4;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  font-family: inherit;
+}
+
+.btn-submit:hover {
+  color: var(--accent);
+  background-color: transparent;
+  border: 2px solid var(--accent);
 }
 
 .semi-circle-pattern {
